@@ -1,0 +1,5 @@
+/home/vlada/Documents/OOP/bank-project/source/bank-project/bin/Debug/bank-project.exe
+/home/vlada/Documents/OOP/bank-project/source/bank-project/bin/Debug/bank-project.pdb
+/home/vlada/Documents/OOP/bank-project/source/bank-project/obj/x86/Debug/bank-project.csprojAssemblyReference.cache
+/home/vlada/Documents/OOP/bank-project/source/bank-project/obj/x86/Debug/bank-project.exe
+/home/vlada/Documents/OOP/bank-project/source/bank-project/obj/x86/Debug/bank-project.pdb

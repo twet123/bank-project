@@ -30,10 +30,25 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Drawing" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Forms\FormMain\FormMain.cs" />
+    <Compile Include="Forms\FormMain\FormMain.Designer.cs" />
+    <Compile Include="Forms\FormLogIn\FormLogin.cs" />
+    <Compile Include="Forms\FormLogIn\FormLogin.Designer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Forms\" />
+    <Folder Include="Forms\FormMain\" />
+    <Folder Include="Forms\FormLogIn\" />
+    <Folder Include="Assets\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\account_box-24px.svg" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
