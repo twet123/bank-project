@@ -1,1 +1,2 @@
 v0.0.1 - project tree and initial settings
+v0.0.2 - project tree improved, made some base forms, initial design
