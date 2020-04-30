@@ -2,22 +2,25 @@
   <MonoDevelop.Ide.ItemProperties.bank-project PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Forms/FormLogIn/FormLogin.Designer.cs">
     <Files>
-      <File FileName="Program.cs" Line="13" Column="15" />
       <File FileName="Forms/FormMain/FormMain.Designer.cs" Line="26" Column="28" />
-      <File FileName="Forms/FormMain/FormMain.cs" Line="9" Column="9" />
+      <File FileName="Forms/FormMain/FormMain.cs" Line="9" Column="1" />
       <File FileName="Forms/FormLogIn/FormLogin.cs" Line="1" Column="1" />
-      <File FileName="Forms/FormLogIn/FormLogin.Designer.cs" Line="21" Column="24" />
+      <File FileName="Forms/FormLogIn/FormLogin.Designer.cs" Line="95" Column="64" />
+      <File FileName="Program.cs" Line="13" Column="15" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="bank-project" expanded="True">
             <Node name="bank-project" expanded="True">
-              <Node name="Assets" expanded="True" selected="True" />
+              <Node name="Assets" expanded="True">
+                <Node name="vpn_key-24px.png" selected="True" />
+              </Node>
               <Node name="Forms" expanded="True">
                 <Node name="FormLogIn" expanded="True" />
                 <Node name="FormMain" expanded="True" />
               </Node>
+              <Node name="Properties" expanded="True" />
             </Node>
           </Node>
         </State>

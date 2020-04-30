@@ -49,6 +49,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\account_box-24px.svg" />
+    <None Include="Assets\vpn_key-24px.png" />
+    <None Include="Assets\account_box-24px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
