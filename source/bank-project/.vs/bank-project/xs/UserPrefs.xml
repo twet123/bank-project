@@ -1,26 +1,25 @@
 ﻿<Properties StartupConfiguration="{822A4F5A-F71D-4106-B136-6F6BF843841B}|Default">
   <MonoDevelop.Ide.ItemProperties.bank-project PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Forms/FormLogIn/FormLogin.Designer.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
     <Files>
-      <File FileName="Forms/FormMain/FormMain.Designer.cs" Line="26" Column="28" />
-      <File FileName="Forms/FormMain/FormMain.cs" Line="9" Column="1" />
-      <File FileName="Forms/FormLogIn/FormLogin.cs" Line="1" Column="1" />
-      <File FileName="Forms/FormLogIn/FormLogin.Designer.cs" Line="95" Column="64" />
-      <File FileName="Program.cs" Line="13" Column="15" />
+      <File FileName="Forms/FormMain/FormMain.Designer.cs" Line="206" Column="55" />
+      <File FileName="Forms/FormMain/FormMain.cs" Line="61" Column="10" />
+      <File FileName="Program.cs" Line="15" Column="42" />
+      <File FileName="Forms/FormLogIn/FormLogin.cs" Line="64" Column="30" />
+      <File FileName="Forms/FormLogIn/FormLogin.Designer.cs" Line="107" Column="10" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="bank-project" expanded="True">
             <Node name="bank-project" expanded="True">
-              <Node name="Assets" expanded="True">
-                <Node name="vpn_key-24px.png" selected="True" />
-              </Node>
+              <Node name="Assets" expanded="True" />
               <Node name="Forms" expanded="True">
                 <Node name="FormLogIn" expanded="True" />
                 <Node name="FormMain" expanded="True" />
               </Node>
               <Node name="Properties" expanded="True" />
+              <Node name="Program.cs" selected="True" />
             </Node>
           </Node>
         </State>

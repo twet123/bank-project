@@ -93,6 +93,7 @@ namespace bankproject.Forms.FormLogIn
             BtnLogin.ForeColor = Color.White;
             BtnLogin.Text = "Log In";
             BtnLogin.Font = new Font("Microsoft Sans Serif", 15);
+            BtnLogin.Click += BtnLogin_Click;
 
             //Adding controls
             this.Controls.Add(PbUsername);
@@ -103,54 +104,6 @@ namespace bankproject.Forms.FormLogIn
             this.Controls.Add(Line1);
             this.Controls.Add(Line2);
             this.Controls.Add(BtnLogin);
-        }
-
-        void Handle_Load(object sender, EventArgs e)
-        {
-            LblHidden.Focus();
-        }
-
-        void TbUsername_Enter(object sender, EventArgs e)
-        {
-            if(TbUsername.Text == "Username")
-            {
-                TbUsername.Text = "";
-
-                TbUsername.ForeColor = Color.Black;
-            }
-        }
-
-        void TbUsername_Leave(object sender, EventArgs e)
-        {
-            if(TbUsername.Text == "")
-            {
-                TbUsername.Text = "Username";
-
-                TbUsername.ForeColor = Color.Silver;
-            }
-        }
-
-        void TbPassword_Enter(object sender, EventArgs e)
-        {
-            if(TbPassword.Text == "Password")
-            {
-                TbPassword.Text = "";
-
-                TbPassword.ForeColor = Color.Black;
-                TbPassword.UseSystemPasswordChar = true;
-            }
-        }
-
-        void TbPassword_Leave(object sender, EventArgs e)
-        {
-            if(TbPassword.Text == "")
-            {
-                TbPassword.Text = "Password";
-
-                TbPassword.ForeColor = Color.Silver;
-
-                TbPassword.UseSystemPasswordChar = false;
-            }
         }
 
     }
