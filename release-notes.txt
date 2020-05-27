@@ -2,3 +2,4 @@ v0.0.1 - project tree and initial settings
 v0.0.2 - project tree improved, made some base forms, initial design
 v0.0.3 - form login 'finished'
 v0.0.4 - whole frontend almost finished
+v1.0.0 - first deploy, frontend finished, backend and MongoDB connection established, connection between database and form works

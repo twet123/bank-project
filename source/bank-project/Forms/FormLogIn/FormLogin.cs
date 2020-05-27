@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Drawing;
+using MongoDB.Driver;
+using bankproject.Models;
 
 namespace bankproject.Forms.FormLogIn
 {
@@ -56,13 +58,26 @@ namespace bankproject.Forms.FormLogIn
 
         void BtnLogin_Click(object sender, EventArgs e)
         {
-            if(TbUsername.Text == "admin" && TbPassword.Text == "admin")
+            var db = Database.Database.Instance.GetDatabase("banka");
+
+            var collection = db.GetCollection<Nalog>("racuni");
+
+            Nalog nalog = collection.Find(item => item.username == TbUsername.Text).FirstOrDefault();
+
+            if (nalog.password == TbPassword.Text)
             {
                 this.Hide();
-                FormMain formMain = new FormMain();
+                FormMain formMain = new FormMain(nalog);
                 formMain.ShowDialog();
                 this.Close();
             }
+
+            else 
+            {
+                return;
+            }
+
+
         }
     }
 }

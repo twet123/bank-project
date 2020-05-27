@@ -1,20 +1,22 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Drawing;
+using bankproject.Models;
 
 namespace bankproject.Forms
 {
     public partial class FormMain : Form
     {
-        Panel PnlSideMenu;
+        Panel PnlSideMenu, PnlMainForm;
         Panel PnlLogo;
         Button BtnRacunInfo, BtnStanje, BtnPregled, BtnUplata, BtnNovaUplata, BtnNovoPlacanje, BtnDizanjeNovca;
         Button BtnPlacanje, BtnNovoDizanje;
         Panel PnlRacunInfoDrop, PnlUplataDrop, PnlPlacanjeDrop, PnlDizanjeNovcaDrop;
 
-        public FormMain()
+        public FormMain(Nalog nalog)
         {
             Render();
+            currentNalog = nalog;
         }
 
         private void Render()
@@ -23,11 +25,11 @@ namespace bankproject.Forms
             this.Font = new Font("Microsoft Sans Serif", 10);
             this.Size = new Size(1020, 720);
             this.MinimumSize = new Size(950, 600);
-
+            //770x720
 
             //PnlSideMenu
             PnlSideMenu = new Panel();
-            PnlSideMenu.BackColor = Color.Black;
+            PnlSideMenu.BackColor = Color.Gray;
             PnlSideMenu.Dock = DockStyle.Left;
             PnlSideMenu.Width = 250;
             PnlSideMenu.AutoScroll = true;
@@ -35,7 +37,7 @@ namespace bankproject.Forms
             //PnlLogo
             PnlLogo = new Panel();
             PnlLogo.Dock = DockStyle.Top;
-            PnlLogo.BackColor = Color.Black;
+            PnlLogo.BackColor = Color.Gray;
             PnlLogo.Size = new Size(250, 100);
 
 
@@ -47,31 +49,35 @@ namespace bankproject.Forms
             BtnRacunInfo.Text = "Infomacije o racunu";
             BtnRacunInfo.FlatStyle = FlatStyle.Flat;
             BtnRacunInfo.FlatAppearance.BorderSize = 0;
-            BtnRacunInfo.BackColor = Color.Black;
+            BtnRacunInfo.BackColor = Color.Gray;
             BtnRacunInfo.ForeColor = Color.White;
             BtnRacunInfo.TextAlign = ContentAlignment.MiddleLeft;
             BtnRacunInfo.Padding = new Padding(10, 0, 0, 0);
+            BtnRacunInfo.Image = Image.FromFile(@"../../Assets/money-check-solid.png");
+            BtnRacunInfo.ImageAlign = ContentAlignment.MiddleLeft;
+            BtnRacunInfo.TextAlign = ContentAlignment.MiddleLeft;
+            BtnRacunInfo.TextImageRelation = TextImageRelation.ImageBeforeText;
             BtnRacunInfo.Click += BtnRacunInfo_Click;
 
             //PnlRacunInfoDrop
             PnlRacunInfoDrop = new Panel();
             PnlRacunInfoDrop.Dock = DockStyle.Top;
             PnlRacunInfoDrop.BackColor = Color.Gray;
-            PnlRacunInfoDrop.Size = new Size(250, 90);
+            PnlRacunInfoDrop.Size = new Size(250, 45);
             PnlRacunInfoDrop.Location = new Point(0, 45);
             PnlRacunInfoDrop.Visible = false;
 
             //BtnStanje
-            BtnStanje = new Button();
-            BtnStanje.Dock = DockStyle.Top;
-            BtnStanje.Size = new Size(250, 45);
-            BtnStanje.Text = "Stanje";
-            BtnStanje.FlatStyle = FlatStyle.Flat;
-            BtnStanje.FlatAppearance.BorderSize = 0;
-            BtnStanje.BackColor = Color.Black;
-            BtnStanje.ForeColor = Color.White;
-            BtnStanje.TextAlign = ContentAlignment.MiddleLeft;
-            BtnStanje.Padding = new Padding(35, 0, 0, 0);
+            //BtnStanje = new Button();
+            //BtnStanje.Dock = DockStyle.Top;
+            //BtnStanje.Size = new Size(250, 45);
+            //BtnStanje.Text = "Stanje";
+            //BtnStanje.FlatStyle = FlatStyle.Flat;
+            //BtnStanje.FlatAppearance.BorderSize = 0;
+            //BtnStanje.BackColor = Color.Black;
+            //BtnStanje.ForeColor = Color.White;
+            //BtnStanje.TextAlign = ContentAlignment.MiddleLeft;
+            //BtnStanje.Padding = new Padding(35, 0, 0, 0);
 
             //BtnPregled
             BtnPregled = new Button();
@@ -84,6 +90,7 @@ namespace bankproject.Forms
             BtnPregled.ForeColor = Color.White;
             BtnPregled.TextAlign = ContentAlignment.MiddleLeft;
             BtnPregled.Padding = new Padding(35, 0, 0, 0);
+            BtnPregled.Click += BtnPregled_Click;
 
 
 
@@ -94,10 +101,14 @@ namespace bankproject.Forms
             BtnUplata.Text = "Uplata";
             BtnUplata.FlatStyle = FlatStyle.Flat;
             BtnUplata.FlatAppearance.BorderSize = 0;
-            BtnUplata.BackColor = Color.Black;
+            BtnUplata.BackColor = Color.Gray;
             BtnUplata.ForeColor = Color.White;
             BtnUplata.TextAlign = ContentAlignment.MiddleLeft;
             BtnUplata.Padding = new Padding(10, 0, 0, 0);
+            BtnUplata.Image = Image.FromFile(@"../../Assets/money-bill-wave-alt-solid.png");
+            BtnUplata.ImageAlign = ContentAlignment.MiddleLeft;
+            BtnUplata.TextAlign = ContentAlignment.MiddleLeft;
+            BtnUplata.TextImageRelation = TextImageRelation.ImageBeforeText;
             BtnUplata.Click += BtnUplata_Click;
 
             //PnlUplataDrop
@@ -118,6 +129,7 @@ namespace bankproject.Forms
             BtnNovaUplata.ForeColor = Color.White;
             BtnNovaUplata.TextAlign = ContentAlignment.MiddleLeft;
             BtnNovaUplata.Padding = new Padding(35, 0, 0, 0);
+            BtnNovaUplata.Click += BtnNovaUplata_Click;
 
 
 
@@ -128,10 +140,14 @@ namespace bankproject.Forms
             BtnPlacanje.Text = "Placanje";
             BtnPlacanje.FlatStyle = FlatStyle.Flat;
             BtnPlacanje.FlatAppearance.BorderSize = 0;
-            BtnPlacanje.BackColor = Color.Black;
+            BtnPlacanje.BackColor = Color.Gray;
             BtnPlacanje.ForeColor = Color.White;
             BtnPlacanje.TextAlign = ContentAlignment.MiddleLeft;
             BtnPlacanje.Padding = new Padding(10, 0, 0, 0);
+            BtnPlacanje.Image = Image.FromFile(@"../../Assets/euro-sign-solid.png");
+            BtnPlacanje.ImageAlign = ContentAlignment.MiddleLeft;
+            BtnPlacanje.TextAlign = ContentAlignment.MiddleLeft;
+            BtnPlacanje.TextImageRelation = TextImageRelation.ImageBeforeText;
             BtnPlacanje.Click += BtnPlacanje_Click;
 
             //PnlPlacanjeDrop
@@ -152,6 +168,7 @@ namespace bankproject.Forms
             BtnNovoPlacanje.ForeColor = Color.White;
             BtnNovoPlacanje.TextAlign = ContentAlignment.MiddleLeft;
             BtnNovoPlacanje.Padding = new Padding(35, 0, 0, 0);
+            BtnNovoPlacanje.Click += BtnNovoPlacanje_Click;
 
 
 
@@ -162,10 +179,14 @@ namespace bankproject.Forms
             BtnDizanjeNovca.Text = "Dizanje novca";
             BtnDizanjeNovca.FlatStyle = FlatStyle.Flat;
             BtnDizanjeNovca.FlatAppearance.BorderSize = 0;
-            BtnDizanjeNovca.BackColor = Color.Black;
+            BtnDizanjeNovca.BackColor = Color.Gray;
             BtnDizanjeNovca.ForeColor = Color.White;
             BtnDizanjeNovca.TextAlign = ContentAlignment.MiddleLeft;
             BtnDizanjeNovca.Padding = new Padding(10, 0, 0, 0);
+            BtnDizanjeNovca.Image = Image.FromFile(@"../../Assets/wallet-solid.png");
+            BtnDizanjeNovca.ImageAlign = ContentAlignment.MiddleLeft;
+            BtnDizanjeNovca.TextAlign = ContentAlignment.MiddleLeft;
+            BtnDizanjeNovca.TextImageRelation = TextImageRelation.ImageBeforeText;
             BtnDizanjeNovca.Click += BtnDizanjeNovca_Click;
 
             //PnlDizanjeNovcaDrop
@@ -187,12 +208,18 @@ namespace bankproject.Forms
             BtnNovoDizanje.ForeColor = Color.White;
             BtnNovoDizanje.TextAlign = ContentAlignment.MiddleLeft;
             BtnNovoDizanje.Padding = new Padding(35, 0, 0, 0);
+            BtnNovoDizanje.Click += BtnNovoDizanje_Click;
+
+            //PnlMainForm
+            PnlMainForm = new Panel();
+            PnlMainForm.Dock = DockStyle.Fill;
+            PnlMainForm.BackColor = Color.White;
 
 
 
             //Adding controls
 
-            PnlRacunInfoDrop.Controls.Add(BtnStanje);
+            //PnlRacunInfoDrop.Controls.Add(BtnStanje);
             PnlRacunInfoDrop.Controls.Add(BtnPregled);
 
             PnlUplataDrop.Controls.Add(BtnNovaUplata);
@@ -212,6 +239,7 @@ namespace bankproject.Forms
             PnlSideMenu.Controls.Add(PnlLogo);
 
             this.Controls.Add(PnlSideMenu);
+            this.Controls.Add(PnlMainForm);
         }
 
     }

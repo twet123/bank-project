@@ -1,25 +1,27 @@
 ﻿<Properties StartupConfiguration="{822A4F5A-F71D-4106-B136-6F6BF843841B}|Default">
   <MonoDevelop.Ide.ItemProperties.bank-project PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Forms/FormPlacanje/FormPlacanje.cs">
     <Files>
-      <File FileName="Forms/FormMain/FormMain.Designer.cs" Line="206" Column="55" />
-      <File FileName="Forms/FormMain/FormMain.cs" Line="61" Column="10" />
-      <File FileName="Program.cs" Line="15" Column="42" />
-      <File FileName="Forms/FormLogIn/FormLogin.cs" Line="64" Column="30" />
-      <File FileName="Forms/FormLogIn/FormLogin.Designer.cs" Line="107" Column="10" />
+      <File FileName="Forms/FormMain/FormMain.cs" Line="101" Column="69" />
+      <File FileName="Forms/FormPlacanje/FormPlacanje.cs" Line="90" Column="106" />
+      <File FileName="Forms/FormPlacanje/FormPlacanje.Designer.cs" Line="99" Column="10" />
+      <File FileName="Forms/FormLogIn/FormLogin.cs" Line="65" Column="13" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="bank-project" expanded="True">
             <Node name="bank-project" expanded="True">
-              <Node name="Assets" expanded="True" />
               <Node name="Forms" expanded="True">
                 <Node name="FormLogIn" expanded="True" />
                 <Node name="FormMain" expanded="True" />
+                <Node name="FormPlacanje" expanded="True">
+                  <Node name="FormPlacanje.cs" selected="True" />
+                </Node>
+                <Node name="FormPodigni" expanded="True" />
+                <Node name="FormPregled" expanded="True" />
+                <Node name="FormUplata" expanded="True" />
               </Node>
-              <Node name="Properties" expanded="True" />
-              <Node name="Program.cs" selected="True" />
             </Node>
           </Node>
         </State>
